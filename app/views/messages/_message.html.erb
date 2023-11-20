@@ -1,0 +1,16 @@
+<div id="message-<%= message.id %>">
+  <div class="d-flex">
+    <div>
+      <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{message.user.username}", class: "avatar" %>
+    </div>
+    <div>
+      <h6>
+        <strong><%= message.user.nickname %></strong>
+        <small>
+          <i><%= time_ago_in_words(message.created_at) %> ago</i>
+        </small>
+      </h6>
+      <p><%= message.content %></p>
+    </div>
+  </div>
+</div>
